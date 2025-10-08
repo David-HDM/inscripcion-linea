@@ -1,3 +1,5 @@
+//Importacion de logos desde assets
+
 import logoCEART from '../../../assets/logos/logo_CEART.png';
 import logoGobierno from '../../../assets/logos/logo_gobierno_estado.png';
 import logoPNE from '../../../assets/logos/logo_PNEIAA.png';
