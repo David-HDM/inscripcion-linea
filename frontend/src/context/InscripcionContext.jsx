@@ -7,6 +7,7 @@ export function InscripcionProvider({ children }) {
   const [datosPersonales, setDatosPersonales] = useState({});
   const [datosCurso, setDatosCurso] = useState({});
   const [datosPago, setDatosPago] = useState({});
+  const [esMenorEdad, setEsMenorEdad] = useState(false);
 
 return (
     <InscripcionContext.Provider value={{
@@ -15,7 +16,9 @@ return (
       datosCurso,
       setDatosCurso,
       datosPago,
-      setDatosPago
+      setDatosPago,
+      esMenorEdad,
+      setEsMenorEdad
     }}>
       {children}
     </InscripcionContext.Provider>

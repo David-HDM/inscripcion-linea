@@ -11,7 +11,7 @@ import { validarNombre,
 
 function DatosPersonales () {
 
-  const { setDatosPersonales } = useContext(InscripcionContext);
+  const { setDatosPersonales, setEsMenorEdad } = useContext(InscripcionContext);
   const [errores, setErrores] = useState({});
 
   const handleChange = (e) => {
@@ -35,6 +35,11 @@ function DatosPersonales () {
     if (name === 'fechaNacimiento') {
       const error = validarFechaNacimiento(value);
       setErrores(prev => ({ ...prev, fechaNacimiento: error }));
+      if (error === 'Escribe los datos del tutor en el siguiente espacio.') {
+        setEsMenorEdad(true);
+      } else {
+        setEsMenorEdad(false);
+      }
     }
 
     if (name === 'telefonoMovil') {

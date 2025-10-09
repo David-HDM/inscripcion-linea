@@ -61,11 +61,11 @@ function DetallesPago () {
                 <button type="button" onClick={toggleDescuentos} id="toggleDiscount" aria-expanded={mostrarDescuentos} aria-controls="discountOptions"
                 className="w-50 bg-purple-600 text-white font-semibold text-sm px-4 py-2 rounded-md flex justify-between items-center">
                     Solicitud de descuento
-                <span className="text-white text-xs ml-2">{mostrarDescuentos ? '▼' : '▲'}</span>
+                <span className="text-white text-xs ml-2">{mostrarDescuentos ? '▲' : '▼'}</span>
                 </button>
 
             {mostrarDescuentos && (
-                <div id="discountOptions" role="region" aria-live="polite"
+                <div id="discountOptions" aria-live="polite"
                 className="mt-2 bg-gray-50 rounded-md shadow-sm p-4 space-y-6 border border-gray-300">
                     <label className="flex items-center space-x-2 text-green-700 text-sm font-medium">
                         <input onChange={handleChange} type="radio" name="descuento" value="DISCAPACIDAD" checked={datosPago.descuento === 'DISCAPACIDAD'}

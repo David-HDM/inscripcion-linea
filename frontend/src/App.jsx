@@ -1,9 +1,3 @@
-import { useState } from 'react'
-
-//De ejemplo
-
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 
 //Componentes
 

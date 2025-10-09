@@ -4,12 +4,19 @@ import DatosCurso from "./sub-components/DatosCurso";
 import DetallesPago from "./sub-components/DetallesPago";
 import BotonInscribir from "./sub-components/BotonInscribir";
 import Footer from "./sub-components/Footer";
+import DatosTutor from "./sub-components/DatosTutor";
+import { useContext } from "react";
+import { InscripcionContext } from "../../context/InscripcionContext";
 
 function Formulario() {
+
+  const { esMenorEdad } = useContext(InscripcionContext);
+
   return (
     <div className="space-y-8">
         <Header /> {/* Encabezado del formulario */}
         <DatosPersonales /> {/* Campos de datos personales del usuario */}
+        {esMenorEdad && <DatosTutor />} {/* Campos de datos del tutor del usuario */}
         <DatosCurso /> {/* Campos de datos del curso que el usuario seleccionará */}
         <DetallesPago /> {/* Campos para los detalles del pago */}
         <BotonInscribir /> {/* Botón para enviar el formulario al back*/}
